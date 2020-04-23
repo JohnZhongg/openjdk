@@ -72,9 +72,9 @@ void perfMemory_exit() {
   // PerfData objects are used in parallel with a safepoint. See
   // the work around in PerfDataManager::destroy().
   //
-  if (SafepointSynchronize::is_at_safepoint() && !StatSampler::is_active()) {
-    PerfDataManager::destroy();
-  }
+//  if (SafepointSynchronize::is_at_safepoint() && !StatSampler::is_active()) {
+//    PerfDataManager::destroy();
+//  }
 
   // Remove the persistent external resources, if any. This method
   // does not unmap or invalidate any virtual memory allocated during
